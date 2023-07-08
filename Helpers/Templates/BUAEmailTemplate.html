@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>PTA Transactions</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        .main p {
+            font-size: 16px;
+            color: #4A4A4A;
+            line-height: 1.5;
+            margin-bottom: 18px;
+        }
+
+        .container {
+            width: 750px;
+        }
+
+        .main .form-wrapper h1 {
+            font-weight: 700;
+            margin: 40px 0 30px;
+        }
+
+            .main .form-wrapper h1 > span {
+                color: #888;
+                display: block;
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+
+        .main .form-wrapper .inner-wrapper {
+            background-color: #FFF;
+            border: 1px solid #CCC;
+            padding: 40px 60px 0;
+        }
+
+            .main .form-wrapper .inner-wrapper h2 {
+                border-bottom: 1px solid #DDD;
+                color: #4A4A4A;
+                font-size: 28px;
+                font-weight: 700;
+                margin: 0 0 40px;
+                padding-bottom: 20px;
+            }
+
+        .main .form-wrapper .form-group {
+            margin-bottom: 20px;
+        }
+
+        .main .form-wrapper .control-label {
+            padding-top: 15px;
+        }
+
+        .main .form-wrapper .form-control {
+            border: 1px solid rgba(0,0,0,.2);
+            font-size: 16px;
+            height: 50px;
+        }
+
+        .main .form-wrapper .input-group .form-control, .main .form-wrapper textarea.form-control {
+            height: auto;
+        }
+
+        .main .form-wrapper .form-action-bar {
+            background: #F2F2F2;
+            border: 1px solid #CCC;
+            border-radius: 0 1px 1px 0;
+            margin-left: -61px;
+            margin-right: -61px;
+            margin-top: 60px;
+            padding: 40px 50px;
+        }
+
+        .bootstrap-select > .dropdown-toggle.bs-placeholder {
+            height: 50px;
+        }
+
+        .main .form-wrapper .form-control.bootstrap-select {
+            border: 0;
+        }
+
+        .main .form-wrapper .form-group input + input {
+            margin-top: 20px;
+        }
+
+        .main .form-wrapper .form-group label > span {
+            color: #9B9B9B;
+            display: block;
+            font-size: 15px;
+        }
+
+        .row {
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .col-md-offset-2 {
+            margin-left: 16.66666667%;
+        }
+
+        .success--msg {
+            padding-bottom: 80px;
+            padding-top: 20px;
+        }
+
+        .welcome--greeting {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 28px;
+        }
+
+        .account-information {
+            background-color: #f7f7f7;
+            border: 1px solid #CCC;
+            font-size: 32px;
+            font-weight: 700;
+            margin: 40px 0;
+            padding: 30px 50px;
+        }
+
+            .account-information > .small {
+                color: #666;
+                font-size: 18px;
+                font-weight: 400;
+                margin-bottom: 5px;
+            }
+
+        .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.1;
+            color: inherit;
+        }
+
+            .h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small {
+                font-weight: 400;
+                line-height: 1;
+                color: #777;
+            }
+
+        .h1, .h2, .h3, h1, h2, h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+            .h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small {
+                font-size: 65%;
+            }
+
+        .h4, .h5, .h6, h4, h5, h6 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+            .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small {
+                font-size: 75%;
+            }
+
+        .h1, h1 {
+            font-size: 36px;
+        }
+
+        .h2, h2 {
+            font-size: 30px;
+        }
+
+        .h3, h3 {
+            font-size: 24px;
+        }
+
+        .h4, h4 {
+            font-size: 18px;
+        }
+
+        .h5, h5 {
+            font-size: 14px;
+        }
+
+        .h6, h6 {
+            font-size: 12px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body class="page">
+    <div class="main">
+        <div class="container">
+            <div class="row form-wrapper">
+                <div class="col-md-12">
+                    <!--<h1 class="text-center">
+                        
+                    </h1>-->
+                    <div class="inner-wrapper">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="success--msg">
+                                    <h4 class="welcome--greeting">
+                                        Dear Valued Merchant,
+                                    </h4>
+                                    <!--<p style="display: block; font-weight: 400">
+                                        Your request is Successful!
+                                    </p>-->
+                                    <div class="account-information text-center">
+                                        <div class="small"></div>
+                                        <!--<p style="text-align: justify"><strong>Terms and Conditions</strong></p>-->
+                                        <p style="text-align: justify">Attached is the Credit and Debit Transaction Report that provides a summary of all incoming and outgoing funds for the specified date <b>{transdate}.</b></p>
+                                        <p style="text-align: justify">Do not hesitate to contact us if you need any further assistance.</p>
+                                        <p style="text-align: justify">Best Regards.</p>
+                                        <p style="font-weight: 400; opacity: 0.5">
+                                            {Footer}.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END /.form-wrapper -->
+            </div>
+        </div>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
