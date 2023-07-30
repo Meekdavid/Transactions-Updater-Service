@@ -33,7 +33,7 @@ namespace PTAUpdater.Helpers.Services
                 }
             }
             // Check for other holidays or celebrations
-            //else if (currentDate == new DateTime(currentDate.Year, 5, 1))
+            /else if (currentDate == new DateTime(currentDate.Year, 5, 1))
             //{
             //    theReturner = "Happy Workers' Day!";
             //}
