@@ -36,7 +36,7 @@ namespace PTAUpdater.Helpers.Services
             else if (currentDate == new DateTime(currentDate.Year, 5, 1))
             {
                 theReturner = "Happy Workers' Day!";
-            /}
+            }
             else if (IsEidAlFitr(currentDate))
             {
                 theReturner = "Eid Mubarak!";
